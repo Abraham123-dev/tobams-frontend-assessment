@@ -15,8 +15,8 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white border-b border-[#DDD0DA] sticky top-0 z-50">
-      {/* Tier 1: Top Bar (Logo + Action Buttons) */}
+    <header className="w-full bg-white relative z-40">
+      {/* Tier 1: Top Bar (Logo + Action Buttons) - 104px Height */}
       <div className="w-full border-b border-[#DDD0DA]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16 h-20 sm:h-[104px] flex items-center justify-between">
           {/* Logo */}
@@ -75,23 +75,26 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Tier 2: Bottom Navigation Links Bar (Desktop) */}
+      {/* Tier 2: Bottom Navigation Links Bar (Desktop) - 69px Height */}
       <div className="hidden lg:block w-full">
-        <div className="max-w-[1440px] mx-auto px-16 h-[69px] flex items-center">
-          <nav className="flex items-center gap-8 w-full justify-between" aria-label="Main Navigation">
+        <div className="max-w-[1440px] mx-auto px-16 h-[69px] flex items-center justify-between">
+          <nav className="flex items-center justify-between w-full" aria-label="Main Navigation">
             {TOP_NAV_ITEMS.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
-                className={`flex items-center gap-1.5 py-1 text-[18px] leading-[150%] transition-colors ${
+                className={`relative flex items-center gap-1.5 py-5 text-[18px] leading-[150%] transition-colors ${
                   item.isActive
-                    ? "text-[#571244] font-semibold border-b border-[#571244]"
+                    ? "text-[#571244] font-semibold"
                     : "text-[#151515] font-normal hover:text-[#571244]"
                 }`}
               >
                 <span>{item.label}</span>
                 {item.hasDropdown && (
                   <ChevronDownIcon className="w-3.5 h-3.5 text-[#571244]" />
+                )}
+                {item.isActive && (
+                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#571244]" />
                 )}
               </Link>
             ))}
