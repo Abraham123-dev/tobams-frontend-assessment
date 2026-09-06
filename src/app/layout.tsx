@@ -17,10 +17,18 @@ const nunitoSans = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tobams-frontend-assessment.vercel.app"),
+  metadataBase: new URL("https://tobams-frontend-assessment-five.vercel.app"),
   title: "Training and Development | Tobams Group",
   description:
     "Our comprehensive range of programs and resources is designed to enhance skills, broaden knowledge, and propel careers forward in today's ever-evolving landscape.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/images/logo.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/images/logo.png",
+  },
   keywords: [
     "Tobams Group",
     "Training and Development",
@@ -58,6 +66,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${nunito.variable} ${nunitoSans.variable}`}>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/images/logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/images/logo.png" />
+      </head>
       <body className="min-h-screen bg-[#F9F9F9] text-[#151515] antialiased selection:bg-[#571244]/20 selection:text-[#571244]">
         {children}
       </body>

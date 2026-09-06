@@ -1,110 +1,118 @@
-# Tobams Group - Training & Development Landing Page
+# Tobams Group - Training and Development Landing Page done by Abraham
 
-A pixel-perfect, production-ready static landing page implementation for **Tobams Group (Training and Development)** built with **Next.js (App Router)** and **Tailwind CSS**.
+This repository contains my implementation of the Tobams Group Training and Development landing page based on the provided Figma design. The project is built with Next.js (App Router) and Tailwind CSS.
 
----
+## Live Deployment and Links
 
-## 🔗 Live Deployment & Resources
+- Live URL: https://tobams-frontend-assessment-five.vercel.app/
+- Figma Reference: https://www.figma.com/design/wuqCLkK1feTgB6xxSRRwZu/Frontend-Intern-Assessment?node-id=0-1&p=f&t=qxnAKp4Ael8QtLYz-0
 
-- **Live URL**: [https://tobams-frontend-assessment.vercel.app](https://tobams-frontend-assessment.vercel.app) *(or your deployed Vercel/Netlify URL)*
-- **GitHub Repository**: [https://github.com/your-username/tobams-frontend-assessment](https://github.com/your-username/tobams-frontend-assessment)
-- **Figma Design Reference**: [Figma Design File](https://www.figma.com/design/wuqCLkK1feTgB6xxSRRwZu/Frontend-Intern-Assessment?node-id=0-1&p=f&t=qxnAKp4Ael8QtLYz-0)
+## Tech Stack
 
----
+- Framework: Next.js 16 (App Router)
+- Styling: Tailwind CSS v4
+- Language: TypeScript
+- Font Loading: next/font/google (Nunito Sans)
+- Image Optimization: next/image
 
-## 🛠️ Tech Stack
-
-- **Framework**: [Next.js 16 (App Router)](https://nextjs.org/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Language**: TypeScript
-- **Fonts**: `next/font/google` (`Nunito Sans` - `400`, `500`, `600`, `700`, `800`)
-- **Optimization**: `next/image` with responsive `sizes` and prioritized LCP assets
-
----
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
-- Node.js `18.18.0` or later
-- npm or yarn or pnpm
 
-### Installation & Setup
+- Node.js 18.18.0 or newer
+- npm (or yarn / pnpm)
 
-1. **Clone the repository**:
+### Installation and Setup
+
+1. Clone this repository:
    ```bash
    git clone https://github.com/your-username/tobams-frontend-assessment.git
    cd tobams-frontend-assessment
    ```
 
-2. **Install dependencies**:
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-3. **Run the local development server**:
+3. Run the development server:
    ```bash
    npm run dev
    ```
-   Open [http://localhost:3000](http://localhost:3000) in your browser.
+   Open http://localhost:3000 in your browser to view the page.
 
-4. **Build for production**:
+4. Build and run in production mode:
    ```bash
    npm run build
    npm run start
    ```
 
----
+## Component Structure
 
-## 📁 Component Architecture
-
-The project adheres to modular architecture with isolated, reusable components under `src/components`:
+The page is broken down into small, focused components located in the `src/components/` folder:
 
 ```
 src/
 ├── app/
-│   ├── layout.tsx             # Root layout with fonts, metadata, OpenGraph
-│   ├── page.tsx               # Main landing page assembling sections
-│   └── globals.css            # Tailwind theme tokens & global styles
+│   ├── globals.css              Global styles, theme variables, and font bindings
+│   ├── layout.tsx               Root layout with metadata and font setup
+│   └── page.tsx                 Main page assembling all landing sections
 ├── components/
-│   ├── Navbar.tsx             # Responsive header with mobile drawer & CTA
-│   ├── Hero.tsx               # Hero banner with overlay & CTA button
-│   ├── LMSSection.tsx         # Circular team photo + lavender feature card
-│   ├── CorporateTrainings.tsx # Text + check bullet list + image
-│   ├── PersonalisedTraining.tsx# Image + text + bullet list (reversed grid)
-│   ├── CapacityDevelopment.tsx# Text + bullet list + image
-│   ├── ManagementProgram.tsx  # Deep plum card + 4 sub-program buttons
-│   ├── TransformationHub.tsx  # Soft rose card with 6 feature pills & image
-│   ├── TrainingConsultant.tsx # Lavender section with 4 deep plum cards
-│   ├── CtaBanner.tsx          # Standalone consultation callout card
-│   ├── Testimonials.tsx       # Carousel/card grid with navigation controls
-│   ├── PreFooterBanner.tsx    # "Let's work together to create a difference"
-│   ├── Footer.tsx             # Full footer with links, offices, contact info
-│   └── Icons.tsx              # Clean, accessible SVG icons
+│   ├── CapacityDevelopment.tsx  Capacity development training block with bullet points
+│   ├── CorporateTrainings.tsx   Corporate training program overview with bullet points
+│   ├── CtaBanner.tsx            Mid-page consultation banner
+│   ├── Footer.tsx               Multi-column footer with office locations and legal links
+│   ├── Hero.tsx                 Hero banner with headline, description, and primary CTA
+│   ├── Icons.tsx                Custom SVG icons (navigation, bullets, social links)
+│   ├── LMSSection.tsx           LMS platform highlight with circular team image
+│   ├── ManagementProgram.tsx    Senior management development section with category pills
+│   ├── Navbar.tsx               Top navigation bar with dropdown indicators and mobile drawer
+│   ├── PersonalisedTraining.tsx Personalised training section with reversed grid layout
+│   ├── PreFooterBanner.tsx      Pre-footer contact callout section
+│   ├── Testimonials.tsx         Testimonials card slider with left and right navigation
+│   ├── TrainingConsultant.tsx   Training consultant features in a 2x2 grid
+│   ├── TrainingProgramsSection.tsx Wrapper for the three training program sections
+│   └── TransformationHub.tsx    Transformation hub section with 6 feature cards and photo
 └── data/
-    └── content.ts             # Typed data for features, testimonials, footer links
+    └── content.ts               Centralized content, links, and testimonial data
 ```
 
----
+## Responsive Layout
 
-## 🎨 Design Decisions & Technical Tokens
+The page is designed and tested to be fully responsive using Tailwind utility classes (`sm:`, `md:`, `lg:`, `xl:`):
 
-- **Color System**:
-  - `Brand Primary / Selection Purple`: `#2C0922` (`--shades-purple-selection-purple-80`)
-  - `Footer Deep Purple`: `#11040E` (`--shades-purple-selection-purple-100`)
-  - `Brand Accent Pink/Crimson`: `#E02B47`
-  - `LMS / Section Lavender Tint`: `rgba(87, 18, 68, 0.08)` / `#5712441A`
-  - `Transformation Hub Rose Tint`: `#FFF4F5`
-- **Responsive Layout**:
-  - Full support for **Mobile (425px)**, **Tablet (768px)**, and **Desktop (1280px - 1440px+)**.
-  - Built using standard Tailwind responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`) without custom media query hacks.
-- **Accessibility & Performance**:
-  - Semantic HTML (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`, `<h1>`-`<h4>`).
-  - Meaningful `alt` text for all images.
-  - Skip to main content link for screen readers.
-  - Keyboard navigation support with visible focus rings (`focus-visible`).
+- Mobile (375px - 425px): Single-column layout, compact typography, horizontal scrollable card slider for testimonials, and an accessible collapsible drawer for the navigation menu.
+- Tablet (768px - 1024px): Two-column grids for content sections with balanced spacing.
+- Desktop (1280px - 1440px+): Full multi-column layout matching the 1440px Figma artboard with exact margins and padding.
 
----
+No custom CSS media queries were used outside standard Tailwind responsive modifiers.
 
-## 🤖 Disclosure
+## Semantic HTML and Accessibility
 
-In accordance with the assessment guidelines, AI development tools were used to assist in accelerating layout structuring, color token verification from Figma exports, and boilerplate setup. All code has been curated, refactored, and tested for clean, human-readable production quality.
+- Uses semantic landmark elements: `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`, and heading tags (`<h1>` to `<h3>`) arranged in logical order.
+- A skip to main content link is included at the top of the page for keyboard and screen reader navigation.
+- Interactive elements (buttons, links, navigation controls) have accessible labels (`aria-label`) and visible focus states (`focus-visible`).
+- All images are rendered using `next/image` with meaningful `alt` attributes and proper responsive sizes.
+
+## Design Decisions and Assumptions
+
+1. Brand Colors and Theme Tokens:
+   Extracted exact color values from the Figma file into CSS variables:
+   - Primary Deep Plum: `#571244` and `#2C0922`
+   - Dark Footer Background: `#11040E`
+   - Accent Crimson/Red: `#EF4353`
+   - Background Tint: `#F9F9F9`
+   - Text Colors: `#151515` (primary dark) and `#696969` (muted body text)
+
+2. Typography:
+   Used Nunito Sans from Google Fonts via Next.js font optimization, matching the font family and weights defined in the design specs.
+
+3. Testimonials Carousel:
+   Implemented smooth horizontal scrolling for testimonial cards with `<` and `>` arrow controls, allowing users on desktop to scroll and touch users on mobile to swipe naturally.
+
+4. Form Actions:
+   Navigation links and CTA buttons link to their corresponding anchor sections (`#about`, `#what-we-do`, `#contact`, etc.) as this is a static landing page implementation.
+
+## AI Tool Disclosure
+
+In accordance with the assessment guidelines, AI coding assistance was used during development for scaffolding boilerplate code, extracting style tokens from Figma layout snippets, and verifying responsive Tailwind classes. All components, styling, responsiveness, and architecture were reviewed and tested.

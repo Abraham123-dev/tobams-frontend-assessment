@@ -92,25 +92,32 @@ export const CONSULTANT_FEATURES = [
 
 export const TESTIMONIALS = [
   {
-    name: "Zoe Mantis",
-    role: "Founder, Alpha Group",
+    name: "Aisha Yusuf",
+    role: "Founder, CraftHub NG",
+    quote:
+      "Working with Tobams Group on our website was a breeze. They understood our vision and transformed it into a beautiful online space. Highly recommend their Website Design service!",
+    avatar: "/images/avatar-1.png",
+  },
+  {
+    name: "John Davies",
+    role: "Marketing Manager, E-Commerce Emporium",
+    quote:
+      "Tobams Group's Digital Marketing strategies gave our brand the boost it needed. Simple yet powerful techniques that delivered tangible results. A pleasure to collaborate with!",
+    avatar: "/images/avatar-2.png",
+  },
+  {
+    name: "Chinonso Nwankwo",
+    role: "HR Director, FutureTech Solutions",
     quote:
       "Tobams Group has been instrumental in our talent acquisition journey. Their Tech Talent Solution service consistently connects us with the right professionals. Reliable and straightforward.",
-    avatar: "/images/lms-team.jpg",
+    avatar: "/images/avatar-3.png",
   },
   {
-    name: "Zoe Mantis",
-    role: "Founder, Alpha Group",
+    name: "Theresa Webb",
+    role: "Creative Director, Studio Noir",
     quote:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit amet consetetur sadipscing elitr.",
-    avatar: "/images/personalised-training.jpg",
-  },
-  {
-    name: "Zoe Mantis",
-    role: "Founder, Alpha Group",
-    quote:
-      "Tobams Group transformed our leadership team's approach to strategic execution. The customized training delivered immediate ROI across our global offices.",
-    avatar: "/images/capacity-development.jpg",
+      "The Creative and Digital Media services at Tobams Group brought our ideas to life. Simple, creative, and impactful – exactly what we needed for our projects.",
+    avatar: "/images/avatar-4.jpg",
   },
 ];
 
